@@ -8,12 +8,11 @@ const {
 } = require("@stellar/stellar-sdk");
 
 const SECRET_KEY = process.env.SECRET_KEY;
-const DEST_KEY   = process.env.DEST_KEY;
+const DEST_KEY   = "GAVFAXLV54GY7M4WZYIZQGP5NFRAJOUQA2LA4UDDUWVJCOIEPEMKYNQG";
 
-if (!SECRET_KEY || !DEST_KEY) {
-  console.error("Erro: defina as variáveis de ambiente SECRET_KEY e DEST_KEY.");
+if (!SECRET_KEY) {
+  console.error("Erro: defina a variável de ambiente SECRET_KEY.");
   console.error("  SECRET_KEY  — secret key da conta de origem");
-  console.error("  DEST_KEY    — public key da conta de destino");
   process.exit(1);
 }
 
